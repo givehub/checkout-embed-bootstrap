@@ -1,12 +1,10 @@
-# [Bootstrap](http://getbootstrap.com)
+# SquadUP Customization Instructions
+* Modify any less file in /less such as variables.less or boostrap.less to include or exclude specific files from the build. Note: /less/squadup-custom.less namespaces the entire bootstrap build
+* Build per the instructions on http://getbootstrap.com/getting-started/#grunt
 
-[![Slack](https://bootstrap-slack.herokuapp.com/badge.svg)](https://bootstrap-slack.herokuapp.com)
-![Bower version](https://img.shields.io/bower/v/bootstrap.svg)
-[![npm version](https://img.shields.io/npm/v/bootstrap.svg)](https://www.npmjs.com/package/bootstrap)
-[![Build Status](https://img.shields.io/travis/twbs/bootstrap/master.svg)](https://travis-ci.org/twbs/bootstrap)
-[![devDependency Status](https://img.shields.io/david/dev/twbs/bootstrap.svg)](https://david-dm.org/twbs/bootstrap#info=devDependencies)
-[![NuGet](https://img.shields.io/nuget/v/bootstrap.svg)](https://www.nuget.org/packages/Bootstrap)
-[![Selenium Test Status](https://saucelabs.com/browser-matrix/bootstrap.svg)](https://saucelabs.com/u/bootstrap)
+Bootstrap version: 3.3.6
+
+# [Bootstrap](http://getbootstrap.com)
 
 Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thornton](https://twitter.com/fat), and maintained by the [core team](https://github.com/orgs/twbs/people) with the massive support and involvement of the community.
 
