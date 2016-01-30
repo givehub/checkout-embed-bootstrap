@@ -162,7 +162,7 @@ module.exports = function (grunt) {
           sourceMapURL: '<%= pkg.name %>.css.map',
           sourceMapFilename: 'dist/css/<%= pkg.name %>.css.map'
         },
-        src: 'less/squadup-custom.less',
+        src: 'less/bootstrap.less',
         dest: 'dist/css/<%= pkg.name %>.css'
       },
       compileTheme: {
@@ -175,6 +175,17 @@ module.exports = function (grunt) {
         },
         src: 'less/theme.less',
         dest: 'dist/css/<%= pkg.name %>-theme.css'
+      },
+      compileNamespace: {
+        options: {
+          strictMath: true,
+          sourceMap: true,
+          outputSourceFiles: true,
+          sourceMapURL: '<%= pkg.name %>-namespace.css.map',
+          sourceMapFilename: 'dist/css/<%= pkg.name %>-namespace.css.map'
+        },
+        src: 'less/squadup-custom.less',
+        dest: 'dist/css/<%= pkg.name %>-namespace.css'
       }
     },
 
@@ -241,6 +252,10 @@ module.exports = function (grunt) {
       minifyTheme: {
         src: 'dist/css/<%= pkg.name %>-theme.css',
         dest: 'dist/css/<%= pkg.name %>-theme.min.css'
+      },
+      namespace: {
+        src: 'dist/css/<%= pkg.name %>-namespace.css',
+        dest: 'dist/css/<%= pkg.name %>-namespace.min.css'
       },
       docs: {
         src: [
@@ -481,6 +496,9 @@ module.exports = function (grunt) {
 
   // Full distribution task.
   grunt.registerTask('dist', ['clean:dist', 'dist-css', 'copy:fonts', 'dist-js']);
+
+  // Name space bootstrap
+  grunt.registerTask('namespace', ['less:compileNamespace', 'cssmin:namespace']);
 
   // Default task.
   grunt.registerTask('default', ['clean:dist', 'copy:fonts', 'test']);
